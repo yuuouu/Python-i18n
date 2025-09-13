@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">应用名称</string>
+    <string name="welcome_msg">欢迎使用</string>
+    <string name="app_exit">确认退出</string>
+    <string name="app_device_connect">设备连接成功</string>
+</resources>

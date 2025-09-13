@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Name</string>
+    <string name="welcome_msg">Welcome</string>
+    <string name="app_exit">Exit</string>
+    <string name="app_device_connect">Connection successful</string>
+</resources>
