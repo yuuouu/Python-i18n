@@ -1,8 +1,14 @@
+---
+dg-publish: true
+title: Python‑i18n
+---
+
 # Python‑i18n
 
+[git clone https://github.com/yuuouu/Python-i18n](https://github.com/yuuouu/Python-i18n)
 ## 介绍
 
-`Python‑i18n` 是一个国际化翻译对齐工具，用于将产品团队维护的 Excel 多语言表格转换为各端（Android、iOS、PC）所需的翻译文件。通过统一翻译源表，避免各端手动拷贝时产生偏差。
+`Python‑i18n` 是一个国际化翻译对齐工具，用于将产品团队维护的 Excel 多语言表格转换为各端（Android、iOS、PC）所需的翻译文件。通过统一翻译源表和输出标准，避免各端手动拷贝时产生偏差。
 
 该项目包含以下文件：
 
@@ -12,7 +18,7 @@
 
 ## 使用方法
 
-1. 准备好你的翻译 Excel 文件。表格必须包含一列名为 `key` 的唯一标识，其余各列代表不同的语言。列名中的括号部分视为语言代码。例如 `中文(zh‑CN)` 会被解析为语言代码 `zh‑CN`。如果没有括号，则整列名作为语言代码使用。
+1. 准备好你的翻译 Excel 文件。表格必须包含一列名为 `key` 的唯一标识，其余各列代表不同的语言。列名中的**括号部分视为语言代码**。例如 `中文(zh‑CN)` 会被解析为语言代码 `zh‑CN`。如果没有括号，则整列名作为语言代码使用。
 2. 安装依赖。脚本基于 [pandas](https://pandas.pydata.org/) 和 Python 标准库：
 
 ```bash
@@ -72,13 +78,14 @@ res/
 
 ## 高阶用法
 
-如果你使用[Listary](https://www.listary.com/)软件，那么在`选项`-`命令`中添加一条命令，在唤起Listary之后，输入关键字，按回车即可静默完成翻译工作，仅需将生成目录移到项目里面即可
+如果你使用[Listary](https://www.listary.com/)软件，那么在`选项`-`命令`中添加一条命令。
+在唤起Listary之后，输入关键字`fy`，按回车即可静默完成翻译工作，`--o 项目\res`可将生成文件直接写入到项目中，一步到位！
 
 ![高阶用法](http://upforme.ru/uploads/001c/43/d3/2/865670.png)
 
 ```
-/k python3 "D:\python-i18n\i18n_converter.py"  --input "D:\python-i18n\sample.xlsx" --platforms android --o "D:\python-i18n\res"
+/k python3 "D:\python-i18n\i18n_converter.py"  --input "D:\python-i18n\sample.xlsx" --platforms android --o "D:\code\project\model\src\main\res"
 ```
 
 
-> 语言代码表：http://www.lingoes.net/zh/translator/langcode.htm
+> 语言代码表：[http://www.lingoes.net/zh/translator/langcode.htm](http://www.lingoes.net/zh/translator/langcode.htm)

@@ -314,10 +314,11 @@ def main() -> None:
         print(f"Unsupported platform(s): {', '.join(invalid)}", file=sys.stderr)
         sys.exit(1)
 
-    try:
-        clear_dir_contents(output_root)
-    except Exception as exc:
-        print(f"Failed to '{input_path}'")
+    # 清除上次生成的内容
+    # try:
+    #     clear_dir_contents(output_root)
+    # except Exception as exc:
+    #     print(f"Failed to '{output_root}'")
 
     # Load Excel
     try:
