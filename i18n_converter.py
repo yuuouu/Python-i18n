@@ -323,6 +323,23 @@ def main() -> None:
     # Load Excel
     try:
         df = pd.read_excel(input_path, dtype=str)
+
+        # 找到 key 列索引
+        key_index = None
+        for i, col in enumerate(df.columns):
+            if str(col).strip().lower() == "key":
+                key_index = i
+                break
+        if key_index is None:
+            raise ValueError("Excel 中必须包含 'key' 列")
+
+        # 只保留从 key 列开始的内容
+        df = df.iloc[:, key_index:]
+
+        # 清洗 key 列：去掉空白并丢弃空行
+        df['key'] = df['key'].fillna('').astype(str).str.strip()
+        df = df[df['key'] != '']
+
     except Exception as exc:
         print(f"Failed to read input Excel file '{input_path}': {exc}", file=sys.stderr)
         sys.exit(1)
