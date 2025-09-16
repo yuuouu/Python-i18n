@@ -5,7 +5,7 @@ dg-path: 业务思考/Python‑i18n 多端翻译文件生成器
 dg-created: 2025-09-13
 ---
 > [!summary] AI摘要
->本项目 Python-i18n (PyI18nX) 是一个用 Python 编写的多语言资源生成工具。它可以读取包含 key 和多语言翻译的 Excel 表格，自动检测 key 列，跳过空行并忽略注释列，对缺失翻译内容回退到英文。脚本会一次性生成 Android 的 strings.xml、iOS 的 Localizable.strings 以及 PC 的 .ini 文件。通过统一翻译入口，避免手动维护差异，支持多语种扩展，实现从 Excel 到多端翻译文件的一键自动化生成。
+>本项目 Python-i18n 是一个用 Python 编写的多端多语言资源文件生成工具。它可以读取包含 key 和多语言翻译的 Excel 表格，自动检测 key 列，跳过空行并忽略注释列，对缺失翻译内容回退到英文。脚本会一次性生成 Android 的 strings.xml、iOS 的 Localizable.strings 以及 PC 的 .ini 文件。通过统一翻译入口，避免手动维护差异，支持多语种扩展，实现从 Excel 到多端翻译文件的一键自动化生成。
 
 >[https://github.com/yuuouu/Python-i18n](https://github.com/yuuouu/Python-i18n)
 ## 介绍
