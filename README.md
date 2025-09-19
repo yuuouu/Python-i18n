@@ -1,16 +1,16 @@
 ---
 dg-publish: true
-title: Python‑i18n 多端翻译文件生成器
+title: Python‑i18n 多端多语言文件生成器
 dg-path: 业务思考/Python‑i18n 多端翻译文件生成器
 dg-created: 2025-09-13
 ---
-> [!summary] AI摘要
+> [!summary] AI摘要  
 >本项目 Python-i18n 是一个用 Python 编写的多端多语言资源文件生成工具。它可以读取包含 key 和多语言翻译的 Excel 表格，自动检测 key 列，跳过空行并忽略注释列，对缺失翻译内容回退到英文。脚本会一次性生成 Android 的 strings.xml、iOS 的 Localizable.strings 以及 PC 的 .ini 文件。通过统一翻译入口，避免手动维护差异，支持多语种扩展，实现从 Excel 到多端翻译文件的一键自动化生成。
 
 >[https://github.com/yuuouu/Python-i18n](https://github.com/yuuouu/Python-i18n)
 ## 介绍
 
-`Python‑i18n` 是一个多端翻译文件生成器，用于将产品团队维护的 Excel 多语言表格转换为各端（Android、iOS、PC）所需的翻译文件。通过统一翻译源表和输出标准，避免各端手动拷贝时产生偏差。  
+`Python‑i18n` 是一个多端多语言文件生成器，用于将产品团队维护的 Excel 多语言表格转换为各端（Android、iOS、PC）所需的翻译文件。通过统一翻译源表和输出标准，避免各端手动拷贝时产生偏差。  
 
 该项目包含以下内容：
 
